@@ -1,0 +1,29 @@
+runtime: python27
+api_version: 1
+threadsafe: true
+handlers:
+- url: /
+  static_files: www/index.html
+  upload: www/index.html
+  expiration: "5m"
+- url: /
+  static_dir: www
+  expiration: "5m"
+skip_files:
+- e2e/
+- node_modules/
+- src/
+- .gitignore
+- .git
+- angular.json
+- ionic.config.json
+- package-lock.json
+- package.json
+- tsconfig.jsin
+- tslint.json
+- ^(.*/)?#.*#$
+- ^(.*/)?.*~$
+- ^(.*/)?.*\.py[co]$
+- ^(.*/)?.*/RCS/.*$
+- ^(.*/)?\..*$
+- ^env/.*$

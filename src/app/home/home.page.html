@@ -1,12 +1,107 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>
-      Ionic Blank
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content padding>
-  The world is your oyster.
-  <p>If you get lost, the <a target="_blank" rel="noopener" href="https://ionicframework.com/docs">docs</a> will be your guide.</p>
+  <ion-grid>
+    <ion-row>
+      <ion-col size-lg="3" size-md="3" size-sm="12" size-xs="12">
+        <app-portfolio-side></app-portfolio-side>
+      </ion-col>
+      <ion-col class="main" size-lg="9" size-md="9" size-sm="12" size-xs="12">
+        <ion-grid>
+          <ion-row>
+            <ion-col>
+              <h1>Kevin Jay Dela Cruz</h1>
+              <h2>Software Ninja</h2>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col>
+              <b>My Tools</b>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col size-lg="6" size-md="6" size-sm="12">
+              <ion-card>
+                <ion-card-subtitle text-center><h3>Server</h3></ion-card-subtitle>
+                <ion-card-content>
+                  <app-skill-item *ngFor="let skill of serverSkills" name="{{skill.txt}}" score="{{skill.percent}}"></app-skill-item>
+                </ion-card-content>
+              </ion-card>
+
+              <ion-card>
+                <ion-card-subtitle text-center><h3>Client</h3></ion-card-subtitle>
+                <ion-card-content>
+                  <app-skill-item *ngFor="let skill of clientSkills" name="{{skill.txt}}" score="{{skill.percent}}"></app-skill-item>
+                </ion-card-content>
+              </ion-card>
+
+              <ion-card>
+                <ion-card-subtitle text-center><h3>Styling</h3></ion-card-subtitle>
+                <ion-card-content>
+                  <app-skill-item *ngFor="let skill of stylingSkills" name="{{skill.txt}}" score="{{skill.percent}}"></app-skill-item>
+                </ion-card-content>
+              </ion-card>
+
+              <ion-card>
+                <ion-card-subtitle text-center><h3>Payment Processors</h3></ion-card-subtitle>
+                <ion-card-content>
+                  <app-skill-item *ngFor="let skill of paymentSkills" name="{{skill.txt}}" score="{{skill.percent}}"></app-skill-item>
+                </ion-card-content>
+              </ion-card>
+
+              <ion-card>
+                <ion-card-subtitle text-center><h3>Local Developement</h3></ion-card-subtitle>
+                <ion-card-content>
+                  <app-skill-item *ngFor="let skill of localSkills" name="{{skill.txt}}" score="{{skill.percent}}"></app-skill-item>
+                </ion-card-content>
+              </ion-card>
+
+            </ion-col>
+            
+            <ion-col size-lg="6" size-md="6" size-sm="12">
+              <ion-card>
+                <ion-card-subtitle text-center><h3>Database</h3></ion-card-subtitle>
+                <ion-card-content>
+                  <app-skill-item *ngFor="let skill of dbSkills" name="{{skill.txt}}" score="{{skill.percent}}"></app-skill-item>
+                </ion-card-content>
+              </ion-card>
+
+              <ion-card>
+                <ion-card-subtitle text-center><h3>CI/CD</h3></ion-card-subtitle>
+                <ion-card-content>
+                  <app-skill-item *ngFor="let skill of ciCdSkills" name="{{skill.txt}}" score="{{skill.percent}}"></app-skill-item>
+                </ion-card-content>
+              </ion-card>
+
+              <ion-card>
+                <ion-card-subtitle text-center><h3>Testing Libraries</h3></ion-card-subtitle>
+                <ion-card-content>
+                  <app-skill-item *ngFor="let skill of testSkills" name="{{skill.txt}}" score="{{skill.percent}}"></app-skill-item>
+                </ion-card-content>
+              </ion-card>
+              
+              <ion-card>
+                <ion-card-subtitle text-center><h3>Caching</h3></ion-card-subtitle>
+                <ion-card-content>
+                  <app-skill-item *ngFor="let skill of cacheSkills" name="{{skill.txt}}" score="{{skill.percent}}"></app-skill-item>
+                </ion-card-content>
+              </ion-card>
+
+              <ion-card>
+                <ion-card-subtitle text-center><h3>Microservices</h3></ion-card-subtitle>
+                <ion-card-content>
+                  <app-skill-item *ngFor="let skill of microSkills" name="{{skill.txt}}" score="{{skill.percent}}"></app-skill-item>
+                </ion-card-content>
+              </ion-card>
+
+              <ion-card>
+                <ion-card-subtitle text-center><h3>Preferred OS</h3></ion-card-subtitle>
+                <ion-card-content>
+                  <app-skill-item *ngFor="let skill of osSkills" name="{{skill.txt}}" score="{{skill.percent}}"></app-skill-item>
+                </ion-card-content>
+              </ion-card>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>

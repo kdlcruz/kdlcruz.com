@@ -1,0 +1,15 @@
+<ion-card>
+  <ion-show-when size="md, lg, xl">
+    <img src="assets/images/profile.jpg">
+  </ion-show-when>
+  <ion-button href="home" expand="full"><ion-icon name="quote" slot="start"></ion-icon>SKILLS</ion-button>
+  <ion-button href="/portfolio" expand="full"><ion-icon name="briefcase" slot="start"></ion-icon>PORRFOLIO</ion-button>
+  <ion-button href="/contacts" expand="full"><ion-icon name="call" slot="start"></ion-icon>CONTACT</ion-button>
+  
+  <ion-card-content text-center>
+    <i>Tools are used for solved problems</i>
+    <br />
+    <ion-button (click)="soAction()" shape="round" size="small"><ion-icon slot="icon-only" class="fab fa-stack-overflow"></ion-icon></ion-button>
+    <ion-button (click)="githubAction()" shape="round" size="small"><ion-icon slot="icon-only" class="fab fa-github"></ion-icon></ion-button>
+  </ion-card-content>
+</ion-card>
