@@ -7,6 +7,10 @@ export default [
 		txt: 'AngularJS',
 		percent: '85'
 	},
+	{
+		txt: 'VueJs',
+		percent: '85'
+	},
   {
 		txt: 'React',
 		percent: '70'
