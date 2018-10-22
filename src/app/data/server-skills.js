@@ -1,6 +1,6 @@
 export default [
   {
-    txt: 'HapiJs',
+    txt: 'Hapi',
     percent: '95'
   },
   {
@@ -8,7 +8,7 @@ export default [
     percent: '93'
   },
   {
-    txt: 'Native',
+    txt: 'Native PHP',
     percent: '86'
   },
   {
