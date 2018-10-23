@@ -29,6 +29,13 @@ export default [
     img: 'kdlcruz.png'
   },
   {
+    name: 'Superhero Challenge',
+    link: 'https://github.com/kdlcruz/SuperHeroChallenge',
+    tags: ['AngularJs', 'NPM', 'Bower'],
+    description: 'A public github projects that showcase my Ionic skills and API Integration',
+    img: 'superhero.png'
+  },
+  {
     name: 'node-gcloud-image',
     link: 'https://hub.docker.com/r/kdlcruz/node-gcloud-image/',
     tags: ['Docker', 'gcloud', 'NodeJs'],
@@ -37,7 +44,7 @@ export default [
   },
   {
     name: 'Bombo',
-    link: 'https://github.com/kdlcruz/SuperHeroChallenge',
+    link: 'https://www.npmjs.com/package/bombo',
     tags: ['AngularJs', 'NPM', 'Bower'],
     description: 'Bombo is an AngularJS service that lets your broadcast messages in between services, controllers and directives.',
     img: 'github.png'
