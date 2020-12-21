@@ -1,11 +1,15 @@
 export default [
   {
-    txt: 'Hapi',
+    txt: 'NestJs',
+    percent: '95'
+  },
+  {
+    txt: 'HapiJs',
     percent: '95'
   },
   {
     txt: 'NodeJs',
-    percent: '93'
+    percent: '95'
   },
   {
     txt: 'Native PHP',

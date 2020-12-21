@@ -13,6 +13,6 @@ export default [
   },
   {
     txt: 'Aws',
-    percent: '85'
+    percent: '87'
   }
 ]

@@ -1,4 +1,8 @@
 export default [
+	{
+		txt: 'React',
+		percent: '95'
+	},
   {
     txt: 'Ionic Framework',
     percent: '90'
@@ -10,10 +14,6 @@ export default [
 	{
 		txt: 'VueJs',
 		percent: '85'
-	},
-  {
-		txt: 'React',
-		percent: '70'
 	},
   {
 		txt: 'JQuery',
