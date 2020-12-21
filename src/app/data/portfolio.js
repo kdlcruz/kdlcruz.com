@@ -2,7 +2,7 @@ export default [
   {
     name: 'Freebird Rides',
     link: 'https://www.freebirdrides.com/',
-    tags: ['HapiJs', 'MongoDB', 'CircleCI', 'AWS', 'Lambda',
+    tags: ['ReactNative', 'NestJs', 'HapiJs', 'MongoDB', 'CircleCI', 'AWS', 'Lambda',
   'SQS', 'SNS', 'Automated Testing'],
     description: 'Go to the hottest bars and restaurants in town that will contribute to your Uber bill.',
     img: 'freebirdrides.png'
@@ -14,13 +14,13 @@ export default [
     description: 'Website with Built-in CMS specifically created for keating\'s content',
     img: 'keating.png'
   },
-  {
-    name: 'Money Insight',
-    link: 'https://insight.kdlcruz.com/',
-    tags: ['Ionic Framework 4', 'HapiJs', 'Mobile', 'API', 'CircleCI', 'Facebook Integration'],
-    description: 'A multi platform app that showcase my Ionic and API integration skills. This app consist 2 projects, client and an API.',
-    img: 'insight.png'
-  },
+  // {
+  //   name: 'Money Insight',
+  //   link: 'https://insight.kdlcruz.com/',
+  //   tags: ['Ionic Framework 4', 'HapiJs', 'Mobile', 'API', 'CircleCI', 'Facebook Integration'],
+  //   description: 'A multi platform app that showcase my Ionic and API integration skills. This app consist 2 projects, client and an API.',
+  //   img: 'insight.png'
+  // },
   {
     name: 'kdlcruz.com',
     link: 'https://github.com/kdlcruz/kdlcruz.com',

@@ -1,18 +1,18 @@
 export default [
   {
     txt: 'Native CSS',
-    percent: '90'
+    percent: '85'
   },
   {
     txt: 'Less',
-    percent: '90'
+    percent: '85'
   },
   {
     txt: 'Sass',
-    percent: '87'
+    percent: '80'
   },
   {
     txt: 'Bootstrap',
-    percent: '90'
+    percent: '85'
   }
 ]

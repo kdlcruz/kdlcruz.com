@@ -5,15 +5,11 @@ export default [
   },
   {
     txt: 'Lambda',
-    percent: '88'
+    percent: '90'
   },
   {
     txt: 'Aws SQS',
-    percent: '85'
-  },
-  {
-    txt: 'Aws SQS',
-    percent: '85'
+    percent: '90'
   },
   {
     txt: 'RabbitMq',
