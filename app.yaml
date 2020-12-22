@@ -9,7 +9,7 @@ handlers:
 - url: /
   static_dir: www
   expiration: "5m"
-- url: /.*
+- url: /contacts
   static_files: www/index.html
   upload: www/index.html
   expiration: "5m"
