@@ -9,6 +9,8 @@ handlers:
 - url: /
   static_dir: www
   expiration: "5m"
+- url: /.*
+  upload: www/index.html
 skip_files:
 - e2e/
 - node_modules/
