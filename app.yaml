@@ -10,6 +10,14 @@ handlers:
   static_files: www/index.html
   upload: www/index.html
   expiration: "5m"
+- url: /portfolio
+  static_files: www/index.html
+  upload: www/index.html
+  expiration: "5m"
+- url: /home
+  static_files: www/index.html
+  upload: www/index.html
+  expiration: "5m"
 skip_files:
 - e2e/
 - node_modules/
