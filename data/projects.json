@@ -1,0 +1,250 @@
+[
+  {
+    "name": "kdlcruz.com",
+    "description": "A public github project that showcase NextJS and Vercel",
+    "cover": "https://utfs.io/a/nv7bbljpkp/QaGLtu0B49L8oXBMHLEpdV9ZfakY4QuULWiqEjhHAMvgFRw3",
+    "techs": [
+      {
+        "name": "Vercel",
+        "level": "experienced"
+      },
+      {
+        "name": "NextJS",
+        "level": "experienced"
+      },
+      {
+        "name": "Tailwind Flowbite",
+        "level": "experienced"
+      }
+    ],
+    "links": [
+      {
+        "link": "https://www.kdlcruz.com",
+        "linkType": "web"
+      }
+    ]
+  },
+  {
+    "name": "LeadershipEdge",
+    "description": "Rebuilt the project from Yii framework to Laravel Framework.",
+    "cover": "https://utfs.io/a/nv7bbljpkp/QaGLtu0B49L8PR5NHojapnBUReb3TYx2wqjXIZtfONo7Jkgc",
+    "techs": [
+      {
+        "name": "JQuery",
+        "level": "expert"
+      },
+      {
+        "name": "Laravel",
+        "level": "experienced"
+      },
+      {
+        "name": "CMS",
+        "level": "experienced"
+      },
+      {
+        "name": "Paypal",
+        "level": "experienced"
+      },
+      {
+        "name": "html2pdf",
+        "level": "experienced"
+      },
+      {
+        "name": "MySql",
+        "level": "experienced"
+      }
+    ],
+    "links": [
+      {
+        "link": "https://leadershipedge.dynamicresults.com/",
+        "linkType": "web"
+      }
+    ]
+  },
+  {
+    "name": "Matcha",
+    "description": "Matcha creates connections through mutual friends, resulting in more comfortable and trusted relationships - for finding new friends or dating.",
+    "cover": "https://utfs.io/a/nv7bbljpkp/QaGLtu0B49L8uIdk8LnyUiDbCXs1InF2TzSm9LJOlf64WqdG",
+    "techs": [
+      {
+        "name": "React Native",
+        "level": "expert"
+      },
+      {
+        "name": "Lambda",
+        "level": "experienced"
+      },
+      {
+        "name": "Serverless",
+        "level": "experienced"
+      },
+      {
+        "name": "DynamoDB",
+        "level": "experienced"
+      },
+      {
+        "name": "React Query",
+        "level": "experienced"
+      },
+      {
+        "name": "Auth0",
+        "level": "experienced"
+      }
+    ],
+    "links": [
+      {
+        "link": "https://www.matcha-app.net/",
+        "linkType": "web"
+      },
+      {
+        "link": "https://testflight.apple.com/join/83mje8QJ",
+        "linkType": "ios"
+      }
+    ]
+  },
+  {
+    "name": "Freebird Rides",
+    "description": "Go to the hottest bars and restaurants in town that will contribute to your Uber bill.",
+    "cover": "https://utfs.io/a/nv7bbljpkp/QaGLtu0B49L86aMEcyL9H30oT8bEVsLRaOucyZdlUFzNXShn",
+    "techs": [
+      {
+        "name": "React Native",
+        "level": "expert"
+      },
+      {
+        "name": "MongoDB",
+        "level": "expert"
+      },
+      {
+        "name": "CircleCI",
+        "level": "expert"
+      },
+      {
+        "name": "NestJS",
+        "level": "experienced"
+      },
+      {
+        "name": "HapiJS",
+        "level": "experienced"
+      },
+      {
+        "name": "AWS",
+        "level": "experienced"
+      },
+      {
+        "name": "Lambda",
+        "level": "experienced"
+      },
+      {
+        "name": "SQS",
+        "level": "amateur"
+      },
+      {
+        "name": "SNS",
+        "level": "amateur"
+      }
+    ],
+    "links": [
+      {
+        "link": "https://www.freebirdrides.com/",
+        "linkType": "web"
+      },
+      {
+        "link": "https://apps.apple.com/us/app/freebird-rewards-cash-back/id1056234061",
+        "linkType": "ios"
+      },
+      {
+        "link": "https://play.google.com/store/apps/details?id=com.freebirdrides.android&hl=en",
+        "linkType": "android"
+      }
+    ]
+  },
+  {
+    "name": "Superhero Challenge",
+    "description": "A public github project that showcase Ionic skills and API intergration",
+    "cover": "https://utfs.io/a/nv7bbljpkp/QaGLtu0B49L879GX39kUwoHMX0yCNErIAkxTaLtVn31J9pZz",
+    "techs": [
+      {
+        "name": "AngularJS",
+        "level": "experienced"
+      },
+      {
+        "name": "Ionic",
+        "level": "amateur"
+      }
+    ],
+    "links": [
+      {
+        "link": "https://github.com/kdlcruz/SuperHeroChallenge",
+        "linkType": "github"
+      }
+    ]
+  },
+  {
+    "name": "node-gcloud-image",
+    "description": "A build image for CircleCI that is based off the circleci/node image with gcloud",
+    "cover": "https://utfs.io/a/nv7bbljpkp/QaGLtu0B49L817xCFeLuVgOj8x2HhoF0SmDXTtnAqBbkfU4L",
+    "techs": [
+      {
+        "name": "NodeJS",
+        "level": "expert"
+      },
+      {
+        "name": "Docker",
+        "level": "experienced"
+      },
+      {
+        "name": "Google Cloud",
+        "level": "experienced"
+      }
+    ],
+    "links": [
+      {
+        "link": "https://hub.docker.com/r/kdlcruz/node-gcloud-image/",
+        "linkType": "web"
+      }
+    ]
+  },
+  {
+    "name": "Bombo",
+    "description": "Bombo is an AngularJs service that lets you broadcast messages in between services, controllers and directives",
+    "cover": "https://utfs.io/a/nv7bbljpkp/QaGLtu0B49L817xCFeLuVgOj8x2HhoF0SmDXTtnAqBbkfU4L",
+    "techs": [
+      {
+        "name": "NPM",
+        "level": "expert"
+      },
+      {
+        "name": "AngularJS",
+        "level": "experienced"
+      },
+      {
+        "name": "Bower",
+        "level": "amateur"
+      }
+    ],
+    "links": [
+      {
+        "link": "https://www.npmjs.com/package/bombo",
+        "linkType": "npm"
+      }
+    ]
+  },
+  {
+    "name": "Generator Restify Starter",
+    "description": "A bolierplate setup for building NodeJs RESTful API using Restify",
+    "cover": "https://utfs.io/a/nv7bbljpkp/QaGLtu0B49L817xCFeLuVgOj8x2HhoF0SmDXTtnAqBbkfU4L",
+    "techs": [
+      {
+        "name": "Restify",
+        "level": "amateur"
+      }
+    ],
+    "links": [
+      {
+        "link": "https://github.com/kdlcruz/generator-restify-starter",
+        "linkType": "github"
+      }
+    ]
+  }
+]
