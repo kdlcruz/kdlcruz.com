@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import { useRouter } from "next/navigation";
 import Link from "next/link";
 import { GithubIcon, StackOverflowIcon } from "../Icons";
 
@@ -28,13 +27,6 @@ const MenuIcon = () => {
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const router = useRouter();
-
-  const handleNavigation = (page: string) => {
-    setIsMenuOpen(false);
-    const route = page.toLowerCase().replace(" ", "-").replace("home", "/");
-    router.push(route);
-  };
 
   return (
     <nav className="fixed top-0 left-0 w-full bg-darkgray-700 text-white shadow-md z-10">
@@ -60,13 +52,15 @@ export default function Navbar() {
 
           <div className="hidden md:flex space-x-4">
             {pages.map((page) => (
-              <button
-                key={page}
-                onClick={() => handleNavigation(page)}
+              <Link
+                prefetch
+                key={`web-${page}`}
+                href={page.toLowerCase().replace(" ", "-").replace("home", "/")}
                 className="text-tan-500 hover:text-white"
               >
+                {" "}
                 {page}
-              </button>
+              </Link>
             ))}
             <a
               href="https://github.com/kdlcruz"
