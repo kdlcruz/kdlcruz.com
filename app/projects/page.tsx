@@ -4,6 +4,13 @@ import { linkTypes, Project } from "@/data/types";
 import { Card, CustomFlowbiteTheme } from "flowbite-react";
 import { ToolChip } from "@/components/ToolChip";
 import { AndroidIcon, AppleIcon, GithubIcon, NpmIcon, WebIcon } from "@/components/Icons";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "kdlcruz projects",
+  description:
+    "Tools are used for solved problems",
+};
 
 const projects: Project[] = projectsJson as Project[];
 
@@ -36,7 +43,7 @@ const linkIcon = {
 
 export default function ProjectsPage() {
   return (
-    <div className="bg-outer-space-900 text-center text-white pt-16">
+    <div className="bg-outer-space-900 text-center text-white">
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 p-4 w-full h-full">
         {projects.map((project) => (
           <div key={project.name} className="col-span-1">
@@ -59,7 +66,7 @@ export default function ProjectsPage() {
                 {project.links.map((link) => (
                   <a
                     key={project.name + link.linkType}
-                    href="https://stackoverflow.com/users/2148468/kdlcruz"
+                    href={link.link}
                     target="_blank"
                     className="button text-tan-500 hover:text-white"
                   >

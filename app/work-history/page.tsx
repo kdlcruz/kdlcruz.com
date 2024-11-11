@@ -13,6 +13,13 @@ import {
   TimelineTime,
   TimelineTitle,
 } from "flowbite-react";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "kdlcruz career",
+  description:
+    "Working with awesome people and building cool things!",
+};
 
 const workHistory: WorkHistory[] = workHistoryJson as WorkHistory[];
 
@@ -49,7 +56,7 @@ const customTheme: CustomFlowbiteTheme["timeline"] = {
 
 export default function WorkHistoryPage() {
   return (
-    <div className="bg-outer-space-900 pt-16">
+    <div className="bg-outer-space-900">
       <div className="flex flex-col space-y-4 p-12">
         <Timeline>
           {workHistory?.map((detail) => (

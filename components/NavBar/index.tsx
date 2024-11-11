@@ -1,67 +1,88 @@
-"use client";
-
-import { useState } from "react";
 import Link from "next/link";
+import {
+  CustomFlowbiteTheme,
+  Navbar,
+  NavbarBrand,
+  NavbarCollapse,
+  NavbarLink,
+  NavbarToggle,
+} from "flowbite-react";
 import { GithubIcon, StackOverflowIcon } from "../Icons";
 
 const pages = ["Home", "Work History", "Projects"];
 
-const MenuIcon = () => {
-  return (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      fill="none"
-      viewBox="0 0 24 24"
-      strokeWidth="1.5"
-      stroke="currentColor"
-      className="w-6 h-6 fill-tan-500"
-    >
-      <path
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
-      />
-    </svg>
-  );
+const customTheme: CustomFlowbiteTheme["navbar"] = {
+  root: {
+    base: "bg-darkgray-700 px-2 py-2.5 sm:px-4 shadow-md z-10",
+    rounded: {
+      on: "rounded",
+      off: "",
+    },
+    bordered: {
+      on: "border",
+      off: "",
+    },
+    inner: {
+      base: "mx-auto flex flex-wrap items-center justify-between",
+      fluid: {
+        on: "",
+        off: "container",
+      },
+    },
+  },
+  brand: {
+    base: "flex items-center",
+  },
+  collapse: {
+    base: "w-full md:block md:w-auto",
+    list: "mt-4 flex flex-col md:mt-0 md:flex-row md:space-x-8 md:text-sm md:font-medium",
+    hidden: {
+      on: "hidden",
+      off: "",
+    },
+  },
+  link: {
+    base: "block py-2 pl-3 pr-4 md:p-0",
+    active: {
+      on: "text-tan-500 text-base font-medium",
+      off: "text-tan-500 text-base font-medium",
+    },
+    disabled: {
+      on: "text-gray-400 hover:cursor-not-allowed dark:text-gray-600",
+      off: "",
+    },
+  },
+  toggle: {
+    base: "inline-flex items-center rounded-lg p-2 text-sm fill-tan-500 md:hidden",
+    icon: "h-6 w-6 shrink-0 fill-tan-500",
+  },
 };
 
-export default function Navbar() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-
+export default function NavBar() {
   return (
-    <nav className="fixed top-0 left-0 w-full bg-darkgray-700 text-white shadow-md z-10">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16">
-          <a
-            href="mailto:me@kdlcruz.com?subject=Hi Kevin, I'd like to hire you"
-            target="_blank"
-            className="hidden md:block text-sm text-primary-500 hover:underline keychainify-checked"
+    <Navbar fluid rounded theme={customTheme}>
+      <NavbarBrand
+        as={Link}
+        href="mailto:me@kdlcruz.com?subject=Hi Kevin, I'd like to hire you"
+        target="_blank"
+      >
+        <span className="text-primary-500 text-sm">
+          Contact: me@kdlcruz.com
+        </span>
+      </NavbarBrand>
+      <NavbarToggle />
+      <NavbarCollapse>
+        {pages.map((page) => (
+          <NavbarLink
+            key={`nav-${page}`}
+            as={Link}
+            href={page.toLowerCase().replace(" ", "-").replace("home", "/")}
           >
-            Contact: me@kdlcruz.com
-          </a>
-
-          <div className="flex md:hidden">
-            <a
-              href="mailto:me@kdlcruz.com?subject=Hi Kevin, I'd like to hire you"
-              target="_blank"
-              className="text-sm text-primary-500 hover:underline keychainify-checked"
-            >
-              Contact: me@kdlcruz.com
-            </a>
-          </div>
-
-          <div className="hidden md:flex space-x-4">
-            {pages.map((page) => (
-              <Link
-                prefetch
-                key={`web-${page}`}
-                href={page.toLowerCase().replace(" ", "-").replace("home", "/")}
-                className="text-tan-500 hover:text-white"
-              >
-                {" "}
-                {page}
-              </Link>
-            ))}
+            {page}
+          </NavbarLink>
+        ))}
+        <NavbarLink>
+          <div className="flex space-x-4">
             <a
               href="https://github.com/kdlcruz"
               target="_blank"
@@ -77,51 +98,8 @@ export default function Navbar() {
               <StackOverflowIcon />
             </a>
           </div>
-
-          <div className="-mr-2 flex md:hidden">
-            <button
-              onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="inline-flex items-center justify-center p-2 rounded-md text-primary-500 hover:text-white hover:bg-gray-700"
-            >
-              <MenuIcon />
-            </button>
-          </div>
-        </div>
-      </div>
-
-      {/* Mobile Menu */}
-      {isMenuOpen && (
-        <div className="md:hidden">
-          <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-            {pages.map((page) => (
-              <Link
-                prefetch
-                key={`mobile-${page}`}
-                href={page.toLowerCase().replace(" ", "-").replace("home", "/")}
-                className="block px-3 py-2 rounded-md text-base font-medium text-tan-500 hover:text-white hover:bg-gray-700"
-              >
-                {page}
-              </Link>
-            ))}
-            <div className="flex space-x-4 px-3 py-2">
-              <a
-                href="https://github.com/kdlcruz"
-                target="_blank"
-                className="button hover:text-white"
-              >
-                <GithubIcon />
-              </a>
-              <a
-                href="https://stackoverflow.com/users/2148468/kdlcruz"
-                target="_blank"
-                className="button hover:text-white"
-              >
-                <StackOverflowIcon />
-              </a>
-            </div>
-          </div>
-        </div>
-      )}
-    </nav>
+        </NavbarLink>
+      </NavbarCollapse>
+    </Navbar>
   );
 }

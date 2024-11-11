@@ -36,8 +36,7 @@ export default function Home() {
               "Tools are used for solved problems!",
               "Some of my tools",
               "Server Side: NodeJS, NextJS, PHP, HapiJS, Laravel...",
-              "Client Side: Typescript, ReactJS, React Native, ReactQuery...",
-              'Check "My tools" for complete lists.',
+              "Client Side: Typescript, ReactJS, React Native, ReactQuery..."
             ]}
             typeSpeed={50}
             backSpeed={60}

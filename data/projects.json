@@ -1,7 +1,7 @@
 [
   {
     "name": "kdlcruz.com",
-    "description": "A public github project that showcase NextJS and Vercel",
+    "description": "A public github project that showcase NextJS and Vercel skills",
     "cover": "https://utfs.io/a/nv7bbljpkp/QaGLtu0B49L8oXBMHLEpdV9ZfakY4QuULWiqEjhHAMvgFRw3",
     "techs": [
       {
@@ -19,8 +19,8 @@
     ],
     "links": [
       {
-        "link": "https://www.kdlcruz.com",
-        "linkType": "web"
+        "link": "https://github.com/kdlcruz/kdlcruz.com",
+        "linkType": "github"
       }
     ]
   },
