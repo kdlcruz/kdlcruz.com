@@ -6,9 +6,9 @@ import type { Container } from "@tsparticles/engine"
 import { loadTrianglesPreset } from "@tsparticles/preset-triangles"
 import { loadSnowPreset } from '@tsparticles/preset-snow'
 
-const d = new Date()
-const month = d.getMonth()
-const isBer = month >= 8
+// const d = new Date()
+// const month = d.getMonth()
+const isBer = true //month >= 8
 
 export const BgParticles = () => {
   

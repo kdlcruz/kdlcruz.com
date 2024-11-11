@@ -17,8 +17,7 @@ import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "kdlcruz career",
-  description:
-    "Working with awesome people and building cool things!",
+  description: "Working with awesome people and building cool things!",
 };
 
 const workHistory: WorkHistory[] = workHistoryJson as WorkHistory[];

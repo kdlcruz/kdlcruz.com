@@ -9,7 +9,7 @@ import {
 } from "flowbite-react";
 import { GithubIcon, StackOverflowIcon } from "../Icons";
 
-const pages = ["Home", "Work History", "Projects"];
+const pages = ["Home", "Work History", "Projects", "Blog"];
 
 const customTheme: CustomFlowbiteTheme["navbar"] = {
   root: {
@@ -76,7 +76,7 @@ export default function NavBar() {
           <NavbarLink
             key={`nav-${page}`}
             as={Link}
-            href={page.toLowerCase().replace(" ", "-").replace("home", "/")}
+            href={`/${page.toLowerCase().replace(" ", "-").replace("home", "/")}`}
           >
             {page}
           </NavbarLink>

@@ -3,13 +3,18 @@ import projectsJson from "@/data/projects.json";
 import { linkTypes, Project } from "@/data/types";
 import { Card, CustomFlowbiteTheme } from "flowbite-react";
 import { ToolChip } from "@/components/ToolChip";
-import { AndroidIcon, AppleIcon, GithubIcon, NpmIcon, WebIcon } from "@/components/Icons";
+import {
+  AndroidIcon,
+  AppleIcon,
+  GithubIcon,
+  NpmIcon,
+  WebIcon,
+} from "@/components/Icons";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "kdlcruz projects",
-  description:
-    "Tools are used for solved problems",
+  description: "Tools are used for solved problems!",
 };
 
 const projects: Project[] = projectsJson as Project[];

@@ -1,9 +1,9 @@
 import type { Config } from "tailwindcss";
 import flowbite from "flowbite-react/tailwind";
 
-const d = new Date();
-const month = d.getMonth();
-const isBer = month >= 8;
+// const d = new Date();
+// const month = d.getMonth();
+const isBer = true //month >= 8;
 
 const customColors = {
   coral: {
