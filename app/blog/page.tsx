@@ -1,22 +1,8 @@
+import { fetchBlog } from "@/utils/fetchBlog";
 import { Button, Card } from "flowbite-react";
 import { Metadata } from "next";
 import Link from "next/link";
-
-const cardData = [
-  {
-    title: "Journey to the First Commit",
-    description: `When I started my career at Tresmax.PH, my world changed. Fresh out of college, I thought I had a pretty good grasp of coding. But when it came to collaborating, I had a hilariously naive idea:
-
-Copy-paste the codebase between computers or set up an FTP server so everyone could instantly see file updates.`,
-    link: "/blog/first-commit",
-  },
-  {
-    title:
-      "Juggling Multiple Projects",
-    description: `About a year into my first job, I dove into the world of side projects. My first gig? A modest $4 an hour. It wasn’t about the money; it was about the learning. Each task was a stepping stone toward something bigger—a brighter opportunity in the future. At the time, burnout wasn’t on my radar. I was fueled by the thrill of growth and the belief that every ounce of effort would pay off down the line.`,
-    link: "/blog/juggling-projects",
-  },
-];
+import { UTApi } from "uploadthing/server"
 
 const truncateString = (str: string, n: number) => {
   if (str.length > n) {
@@ -30,7 +16,28 @@ export const metadata: Metadata = {
   description: "Personal experience, ideas and some random thigns",
 };
 
-export default function BlogPage() {
+type CardData = {
+  title: string
+  description: string
+  link: string
+}
+
+export default async function BlogPage() {
+  const utapi = new UTApi()
+  const files = await utapi.listFiles()
+  const cardData: CardData[] = await Promise.all(
+    files.files.map(async (file) => {
+      const markdownContent = await fetchBlog(file.key)
+      const content = markdownContent.replace(/#[\s\S]*?##/, ''); // Clean the content
+  
+      return {
+        title: file.name.replace('.md', ''),
+        description: truncateString(content, 250), // Truncate the cleaned content
+        link: `/blog/${file.key}`,
+      }
+    })
+  )
+
   return (
     <div className="bg-outer-space-900 text-center text-white">
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-4 p-4 w-full h-full place-items-center">
@@ -39,7 +46,7 @@ export default function BlogPage() {
             <h5 className="text-2xl font-bold tracking-tight text-primary-500">
               {card.title}
             </h5>
-            <p className="font-normal text-tan-500">{truncateString(card.description, 250)}</p>
+            <p className="font-normal text-tan-500">{card.description}</p>
             <Button as={Link} href={card.link}>
               Read more
               <svg

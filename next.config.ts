@@ -11,7 +11,7 @@ const nextConfig: NextConfig = {
         pathname: "/a/nv7bbljpkp/**",
       },
     ],
-  },
+  }
 };
 
 export default nextConfig;
