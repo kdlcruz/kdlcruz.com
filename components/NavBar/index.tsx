@@ -77,6 +77,7 @@ export default function NavBar() {
             key={`nav-${page}`}
             as={Link}
             href={`/${page.toLowerCase().replace(" ", "-").replace("home", "/")}`}
+            prefetch={true}
           >
             {page}
           </NavbarLink>
