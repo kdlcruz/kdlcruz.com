@@ -1,8 +1,7 @@
 import React from "react";
 import projectsJson from "@/data/projects.json";
-import { linkTypes, Project } from "@/data/types";
+import { Project } from "@/data/types";
 import { Card, CustomFlowbiteTheme } from "flowbite-react";
-import { ToolChip } from "@/components/ToolChip";
 import {
   AndroidIcon,
   AppleIcon,
@@ -17,7 +16,7 @@ export const metadata: Metadata = {
   description: "Tools are used for solved problems!",
 };
 
-const projects: Project[] = projectsJson as Project[];
+const projects: Project[] = projectsJson;
 
 const customTheme: CustomFlowbiteTheme["card"] = {
   root: {
@@ -38,46 +37,109 @@ const customTheme: CustomFlowbiteTheme["card"] = {
   },
 };
 
-const linkIcon = {
-  [linkTypes.github]: <GithubIcon />,
-  [linkTypes.npm]: <NpmIcon />,
-  [linkTypes.android]: <AndroidIcon />,
-  [linkTypes.ios]: <AppleIcon />,
-  [linkTypes.web]: <WebIcon />,
-};
-
 export default function ProjectsPage() {
   return (
-    <div className="bg-outer-space-900 text-center text-white">
+    <div className="bg-teal-900 text-center text-white">
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 p-4 w-full h-full">
         {projects.map((project) => (
-          <div key={project.name} className="col-span-1">
+          <div key={project.title} className="col-span-1">
             <Card
               className="max-w-md"
               imgAlt={project.description}
-              imgSrc={project.cover}
+              imgSrc={project.image}
               theme={customTheme}
             >
-              <h5 className="text-2xl font-bold tracking-tight text-primary-500">
-                {project.name}
+              <h5 className="text-2xl font-bold tracking-tight text-white">
+                {project.title}
               </h5>
-              <p className="font-normal text-tan-500">{project.description}</p>
-              <div className="flex flex-wrap gap-4">
-                {project.techs.map((tech) => (
-                  <ToolChip key={`${project.name}-${tech.name}`} tech={tech} />
+              <div className="flex flex-wrap gap-2 mt-1">
+                {project.type.map((t, i) => (
+                  <span
+                    key={i}
+                    className="text-xs px-2 py-1 bg-amber-200 text-amber-800 rounded-full"
+                  >
+                    {t}
+                  </span>
                 ))}
               </div>
+              <p className="font-normal text-tan-500">{project.description}</p>
+              <div className="flex flex-wrap gap-4">
+                {/* Frontend pills */}
+                <div className="mt-3">
+                  <strong className="text-xs block mb-1">Frontend:</strong>
+                  <div className="flex flex-wrap gap-2">
+                    {project.frontend.map((tech, i) => (
+                      <span
+                        key={i}
+                        className="text-xs px-2 py-1 bg-blue-200 text-blue-800 rounded-full"
+                      >
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Backend pills */}
+                <div className="mt-3">
+                  <strong className="text-xs block mb-1">Backend:</strong>
+                  <div className="flex flex-wrap gap-2">
+                    {project.backend.map((tech, i) => (
+                      <span
+                        key={i}
+                        className="text-xs px-2 py-1 bg-green-200 text-green-800 rounded-full"
+                      >
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              </div>
               <div className="flex flex-wrap gap-4 border-t-[5px] border-cardBorder pt-4">
-                {project.links.map((link) => (
+                {project.links.ios && (
                   <a
-                    key={project.name + link.linkType}
-                    href={link.link}
+                    href={project.links.ios}
                     target="_blank"
-                    className="button text-tan-500 hover:text-white"
+                    rel="noopener noreferrer"
                   >
-                    {linkIcon[link.linkType]}
+                    <AppleIcon />
                   </a>
-                ))}
+                )}
+                {project.links.android && (
+                  <a
+                    href={project.links.android}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <AndroidIcon />
+                  </a>
+                )}
+                {project.links.web && (
+                  <a
+                    href={project.links.web}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <WebIcon />
+                  </a>
+                )}
+                {project.links.npm && (
+                  <a
+                    href={project.links.npm}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <NpmIcon />
+                  </a>
+                )}
+                {project.links.github && (
+                  <a
+                    href={project.links.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <GithubIcon />
+                  </a>
+                )}
               </div>
             </Card>
           </div>

@@ -1,7 +1,7 @@
 export const AppleIcon = () => {
   return (
     <svg
-      className="w-6 h-6 fill-primary-500"
+      className="w-6 h-6 fill-tan-500"
       aria-hidden="true"
       xmlns="http://www.w3.org/2000/svg"
       width="24"
@@ -17,7 +17,7 @@ export const AppleIcon = () => {
 export const NpmIcon = () => {
   return (
     <svg
-      className="w-6 h-6  text-primary-500"
+      className="w-6 h-6  fill-tan-500"
       aria-hidden="true"
       xmlns="http://www.w3.org/2000/svg"
       width="24"
@@ -39,7 +39,7 @@ export const NpmIcon = () => {
 export const GithubIcon = () => {
   return (
     <svg
-      className="w-6 h-6 text-primary-500"
+      className="w-6 h-6 fill-tan-500"
       aria-hidden="true"
       xmlns="http://www.w3.org/2000/svg"
       width="24"
@@ -56,10 +56,24 @@ export const GithubIcon = () => {
   );
 };
 
+export const BlogIcon = () => {
+  return (
+    <svg
+      className="w-6 h-6 fill-tan-500"
+      aria-hidden="true"
+      xmlns="http://www.w3.org/2000/svg"
+      fill="currentColor"
+      viewBox="0 0 24 24"
+    >
+      <path d="M4 4h16v16H4V4zm2 2v12h12V6H6zm2 2h8v2H8V8zm0 4h8v2H8v-2z" />
+    </svg>
+  );
+};
+
 export const WebIcon = () => {
   return (
     <svg
-      className="w-6 h-6 text-primary-500"
+      className="w-6 h-6 fill-tan-500"
       aria-hidden="true"
       xmlns="http://www.w3.org/2000/svg"
       width="24"
@@ -83,7 +97,7 @@ export const AndroidIcon = () => {
     <svg
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 576 512"
-      className="w-6 h-6 fill-primary-500"
+      className="w-6 h-6 fill-tan-500"
     >
       <path d="M420.6 301.9a24 24 0 1 1 24-24 24 24 0 0 1 -24 24m-265.1 0a24 24 0 1 1 24-24 24 24 0 0 1 -24 24m273.7-144.5 47.9-83a10 10 0 1 0 -17.3-10h0l-48.5 84.1a301.3 301.3 0 0 0 -246.6 0L116.2 64.5a10 10 0 1 0 -17.3 10h0l47.9 83C64.5 202.2 8.2 285.6 0 384H576c-8.2-98.5-64.5-181.8-146.9-226.6" />
     </svg>
@@ -91,7 +105,8 @@ export const AndroidIcon = () => {
 };
 
 export const StackOverflowIcon = () => (
-  <svg className="w-6 h-6 fill-primary-500">
+  <svg className="w-6 h-6 fill-tan-500">
     <path d="M15 21h-10v-2h10v2zm6-11.665l-1.621-9.335-1.993.346 1.62 9.335 1.994-.346zm-5.964 6.937l-9.746-.975-.186 2.016 9.755.879.177-1.92zm.538-2.587l-9.276-2.608-.526 1.954 9.306 2.5.496-1.846zm1.204-2.413l-8.297-4.864-1.029 1.743 8.298 4.865 1.028-1.744zm1.866-1.467l-5.339-7.829-1.672 1.14 5.339 7.829 1.672-1.14zm-2.644 4.195v8h-12v-8h-2v10h16v-10h-2z" />
   </svg>
 );
+

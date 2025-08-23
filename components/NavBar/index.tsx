@@ -66,7 +66,7 @@ export default function NavBar() {
         href="mailto:me@kdlcruz.com?subject=Hi Kevin, I'd like to hire you"
         target="_blank"
       >
-        <span className="text-primary-500 text-sm">
+        <span className="text-tan-500 text-sm">
           Contact: me@kdlcruz.com
         </span>
       </NavbarBrand>
@@ -76,30 +76,32 @@ export default function NavBar() {
           <NavbarLink
             key={`nav-${page}`}
             as={Link}
-            href={`/${page.toLowerCase().replace(" ", "-").replace("home", "/")}`}
+            href={`/${page
+              .toLowerCase()
+              .replace(" ", "-")
+              .replace("home", "/")}`}
             prefetch={true}
           >
             {page}
           </NavbarLink>
         ))}
-        <NavbarLink>
-          <div className="flex space-x-4">
-            <a
-              href="https://github.com/kdlcruz"
-              target="_blank"
-              className="button  hover:text-white"
-            >
-              <GithubIcon />
-            </a>
-            <a
-              href="https://stackoverflow.com/users/2148468/kdlcruz"
-              target="_blank"
-              className="button  hover:text-white"
-            >
-              <StackOverflowIcon />
-            </a>
-          </div>
+        <div className="flex space-x-4">
+        <NavbarLink
+          href="https://github.com/kdlcruz"
+          target="_blank"
+          className="button  hover:text-white "
+        >
+          <GithubIcon />
         </NavbarLink>
+        <NavbarLink
+          href="https://stackoverflow.com/users/2148468/kdlcruz"
+          target="_blank"
+          className="button  hover:text-white"
+        >
+          <StackOverflowIcon />
+        </NavbarLink>
+        </div>
+        
       </NavbarCollapse>
     </Navbar>
   );

@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import Navbar from "@/components/NavBar";
+// import Navbar from "@/components/NavBar";
 import { ThemeModeScript } from "flowbite-react";
 
 export const metadata: Metadata = {
@@ -21,7 +21,7 @@ export default function RootLayout({
       </head>
       <body>
         <div className="h-screen flex flex-col">
-          <Navbar />
+          {/* <Navbar /> */}
           {children}
         </div>
       </body>

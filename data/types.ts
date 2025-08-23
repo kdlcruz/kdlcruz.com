@@ -42,12 +42,20 @@ export type Link = {
 }
 
 export type Project = {
-  name: string
-  cover: string
-  description: string
-  techs: Tech[]
-  links: Link[]
-}
+  title: string;
+  image: string;
+  description: string;
+  frontend: string[];
+  backend: string[];
+  type: string[];
+  links: {
+    web?: string;
+    android?: string;
+    ios?: string;
+    github?: string;
+    npm?: string;
+  };
+};
 
 export type MyTool = {
   title: string
