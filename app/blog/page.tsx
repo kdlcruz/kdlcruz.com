@@ -39,7 +39,7 @@ export default async function BlogPage() {
   )
 
   return (
-    <div className="bg-outer-space-900 text-center text-white">
+    <div className="bg-teal-900 text-center text-white">
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-4 p-4 w-full h-full place-items-center">
         {cardData.map((card) => (
           <Card key={card.title} className="max-w-sm bg-darkgray-700">

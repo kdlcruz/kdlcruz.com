@@ -1,4 +1,3 @@
-import { ToolChip } from "@/components/ToolChip";
 import { WorkHistory } from "@/data/types";
 import workHistoryJson from "@/data/work-history.json";
 import Image from "next/image";
@@ -55,7 +54,7 @@ const customTheme: CustomFlowbiteTheme["timeline"] = {
 
 export default function WorkHistoryPage() {
   return (
-    <div className="bg-outer-space-900">
+    <div className="bg-teal-900">
       <div className="flex flex-col space-y-4 p-12">
         <Timeline>
           {workHistory?.map((detail) => (
@@ -71,13 +70,13 @@ export default function WorkHistoryPage() {
                     height={80}
                   />
                 ) : (
-                  <p className="text-2xl text-primary-500">
+                  <p className="text-2xl text-white">
                     {detail.companyName.charAt(0).toUpperCase()}
                   </p>
                 )}
               </div>
               <TimelineContent>
-                <TimelineTitle theme={customTheme?.item?.content?.title}>
+                <TimelineTitle theme={customTheme?.item?.content?.title} className="text-white">
                   {detail.companyName} - {detail.position}
                 </TimelineTitle>
 
@@ -89,11 +88,14 @@ export default function WorkHistoryPage() {
                 </TimelineBody>
                 <div className="flex flex-wrap gap-4">
                   {detail.techs.map((tech) => (
-                    <ToolChip
+                    <span
                       key={`${detail.companyName}-${tech.name}`}
-                      tech={tech}
-                    />
+                      className="text-xs px-2 py-1 bg-blue-500 text-white rounded-full"
+                    >
+                      {tech.name}
+                    </span>
                   ))}
+                  
                 </div>
               </TimelineContent>
             </TimelineItem>

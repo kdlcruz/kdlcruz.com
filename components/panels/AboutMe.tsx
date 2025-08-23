@@ -15,20 +15,6 @@ export const AboutMe = () => {
     setRemoteYears(now.getFullYear() - 2017 - (now.getMonth() + 1 < 9 ? 1 : 0));
   }, []);
 
-  if (totalYears === null || remoteYears === null)
-    return (
-      <div className="max-w-2xl p-6 bg-card rounded-xl shadow-lg text-description flex flex-col">
-        <div className="flex flex-col md:flex-row items-center md:items-start space-y-4 md:space-y-0 md:space-x-6">
-          <div className="w-32 h-32 rounded-full border-4 border-primary-500 bg-gray-700 mx-auto md:mx-0" />
-          <div className="flex-1 flex flex-col justify-start space-y-4 text-center md:text-left">
-            <p className="h-4 bg-gray-600 rounded w-3/4 mx-auto md:mx-0" />
-            <p className="h-4 bg-gray-600 rounded w-full" />
-            <p className="h-4 bg-gray-600 rounded w-5/6" />
-          </div>
-        </div>
-      </div>
-    );
-
   return (
     <div
       className="max-w-2xl p-6 bg-teal-100 rounded-xl shadow-lg text-description flex flex-col"
