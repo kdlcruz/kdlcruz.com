@@ -14,7 +14,7 @@
       "Expo Auth Session"
     ],
     "backend": ["SST", "Lambda", "DynamoDB", "SNS", "SQS", "OpenAI"],
-    "type": ["Personal", "Closed Testing"],
+    "type": ["Personal", "Production"],
     "links": {
       "android": "https://play.google.com/store/apps/details?id=com.kdlcruz.greenhand",
       "web": "https://greenhand.kdlcruz.com"
@@ -34,7 +34,7 @@
       "Expo Auth Session"
     ],
     "backend": ["SST", "Lambda", "DynamoDB", "SNS", "SQS", "OpenAI"],
-    "type": ["Personal", "Production Review"],
+    "type": ["Personal", "Production"],
     "links": {
       "web": "https://triviai.kdlcruz.com/",
       "android": "https://play.google.com/store/apps/details?id=com.kdlcruz.triviai"
