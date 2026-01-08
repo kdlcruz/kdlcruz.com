@@ -42,7 +42,7 @@ export const Projects = () => {
             {/* Title + Links (only grouped on small screens) */}
             <div className="flex flex-col md:hidden">
               <div className="flex items-center gap-2">
-                <h3 className="text-lg font-semibold text-title">
+                <h3 className="text-lg font-semibold text-title dark:text-white">
                   {project.title}
                 </h3>
                 <div className="flex gap-2">
@@ -86,7 +86,7 @@ export const Projects = () => {
             {/* Desktop Title Row */}
             <div className="hidden md:flex items-center justify-between">
               <div className="flex items-center gap-3">
-                <h3 className="text-2xl font-semibold text-title">
+                <h3 className="text-2xl font-semibold text-title dark:text-white">
                   {project.title}
                 </h3>
                 <div className="flex gap-2">
@@ -125,11 +125,11 @@ export const Projects = () => {
             </div>
 
             {/* Description */}
-            <p className="mt-2 text-sm ">{project.description}</p>
+            <p className="mt-2 text-sm text-description dark:text-gray-300">{project.description}</p>
 
             {/* Frontend pills */}
             <div className="mt-3">
-              <strong className="text-xs block mb-1">Frontend:</strong>
+              <strong className="text-xs block mb-1 dark:text-gray-300">Frontend:</strong>
               <div className="flex flex-wrap gap-2">
                 {project.frontend.map((tech, i) => (
                   <span
@@ -144,7 +144,7 @@ export const Projects = () => {
 
             {/* Backend pills */}
             <div className="mt-3">
-              <strong className="text-xs block mb-1">Backend:</strong>
+              <strong className="text-xs block mb-1 dark:text-gray-300">Backend:</strong>
               <div className="flex flex-wrap gap-2">
                 {project.backend.map((tech, i) => (
                   <span
