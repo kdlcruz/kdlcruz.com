@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 // import Navbar from "@/components/NavBar";
 import { ThemeModeScript } from "flowbite-react";
+import { ThemeInit } from "@/.flowbite-react/init";
 
 export const metadata: Metadata = {
   title: "kdlcruz (Kevin Jay Dela Cruz)",
@@ -20,6 +21,7 @@ export default function RootLayout({
         <ThemeModeScript />
       </head>
       <body>
+        <ThemeInit />
         <div className="h-screen flex flex-col">
           {/* <Navbar /> */}
           {children}

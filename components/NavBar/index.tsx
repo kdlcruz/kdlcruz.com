@@ -1,6 +1,7 @@
+"use client";
+
 import Link from "next/link";
 import {
-  CustomFlowbiteTheme,
   Navbar,
   NavbarBrand,
   NavbarCollapse,
@@ -11,7 +12,7 @@ import { GithubIcon, StackOverflowIcon } from "../Icons";
 
 const pages = ["Home", "Work History", "Projects", "Blog"];
 
-const customTheme: CustomFlowbiteTheme["navbar"] = {
+const customTheme = {
   root: {
     base: "bg-darkgray-700 px-2 py-2.5 sm:px-4 shadow-md z-10",
     rounded: {
@@ -80,7 +81,6 @@ export default function NavBar() {
               .toLowerCase()
               .replace(" ", "-")
               .replace("home", "/")}`}
-            prefetch={true}
           >
             {page}
           </NavbarLink>

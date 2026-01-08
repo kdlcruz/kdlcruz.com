@@ -4,11 +4,11 @@ import Image from "next/image";
 import Link from "next/link";
 import workHistoryJson from "@/data/work-history.json";
 import { WorkHistory } from "@/data/types";
-import { CustomFlowbiteTheme, Timeline, TimelineBody, TimelineContent, TimelineItem, TimelinePoint, TimelineTime, TimelineTitle } from "flowbite-react";
+import { Timeline, TimelineBody, TimelineContent, TimelineItem, TimelinePoint, TimelineTime, TimelineTitle } from "flowbite-react";
 
 const workHistory: WorkHistory[] = workHistoryJson.splice(0, 3) as WorkHistory[];
 
-const customTheme: CustomFlowbiteTheme["timeline"] = {
+const customTheme = {
   root: {
     direction: {
       horizontal: "sm:flex",

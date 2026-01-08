@@ -1,7 +1,7 @@
 import React from "react";
 import projectsJson from "@/data/projects.json";
 import { Project } from "@/data/types";
-import { Card, CustomFlowbiteTheme } from "flowbite-react";
+import { Card } from "flowbite-react";
 import {
   AndroidIcon,
   AppleIcon,
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
 
 const projects: Project[] = projectsJson;
 
-const customTheme: CustomFlowbiteTheme["card"] = {
+const customTheme = {
   root: {
     base: "flex rounded-lg border border-[5px] border-cardBorder bg-outer-space-900 shadow-md",
     children: "flex h-full flex-col justify-center gap-4 p-6",

@@ -1,9 +1,10 @@
+"use client";
+
 import { WorkHistory } from "@/data/types";
 import workHistoryJson from "@/data/work-history.json";
 import Image from "next/image";
 import React from "react";
 import {
-  CustomFlowbiteTheme,
   Timeline,
   TimelineBody,
   TimelineContent,
@@ -12,16 +13,10 @@ import {
   TimelineTime,
   TimelineTitle,
 } from "flowbite-react";
-import { Metadata } from "next";
-
-export const metadata: Metadata = {
-  title: "kdlcruz career",
-  description: "Working with awesome people and building cool things!",
-};
 
 const workHistory: WorkHistory[] = workHistoryJson as WorkHistory[];
 
-const customTheme: CustomFlowbiteTheme["timeline"] = {
+const customTheme = {
   root: {
     direction: {
       horizontal: "sm:flex",
